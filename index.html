@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<body>	
+<head>
+	  <meta charset="UTF-8">
+      <meta name="description" content="anthropology">
+     <meta name="keywords" content="HTML,CSS ,Javascript">
+	  <h3> Taxonomical calculator</h3>
+</head>
+<style>
+  body{
+  background: gray;
+  color:red;
+  }
+</style>
+
+<div class="title">Racial Analysis Calculator (Male Version) </div>
+<div class="author">by Damir Covaliov</div>
+
+<div class ="date">2024 august --Damir</div>
+
+<p> All measurements in <b>milliters</b> this is only for white Males(caucasoids)</p>
+
+<table>
+  <tbody>
+  <form name="metrology">
+   <tr>
+     <td> Head Length : </td>
+     <td>
+	 <input type="text" name="HL" >
+	 </td>
+   </tr>
+   <tr>
+     <td> Head Breadth : </td>
+	 <td>
+	  <input type="text" name="HB"  >
+	 </td>
+   </tr>
+   <tr>
+     <td> Total Facial Height : </td>
+     <td>
+	<input type="text" name="FH" >
+    </td>
+   </tr>
+   <tr>
+     <td> Bizogamatic : </td>
+	 <td>
+	 <input type="text" name="BZ" >
+	 </td>
+   </tr>
+   <tr>
+     <td> Bigonial : </td>
+	 <td>
+	 <input type="text" name="BG" >
+	 </td>
+   </tr>
+   <tr> 
+    <td> Upper Facial Height: </td>
+	<td>
+	 <input type="text" name="UFH"> 
+	</td>
+	</tr>
+	<tr> 
+	 <td> Nasal Breadth: </td>
+	 <td>
+	  <input type="text" name="NB" >
+	  </td>
+	</tr>
+	<tr>
+	 <td> Nasal Length:</td>
+	 <td>
+	 <input type="text" name="NL" >
+	 </td>
+	 </tr>
+	 <tr>
+		<td> IndexCI : </td>
+		<td>
+		<input type="text" name="CI" >
+		</td>
+	  </tr>
+	  <tr> 
+		<td> IndexNI : </td>
+		<td>
+		 <input type="text" name="NI"> 
+		</td>
+		</tr>
+		<tr>
+			<td> IndexUF:</td>
+			<td>
+			<input type="text" name="UF" >
+			<tr>
+			   <td> IndexFI : </td>
+			   <td>
+			   <input type="text" name="FI" >
+			   </td>
+			</tr>
+			<tr>
+			<td>
+	     <input type="button" value="CalculateModuls" onclick="ratio()">
+		 
+	     <a href = results.html>
+		<button type="button" id="btn" > ++ studied people Sources </button> 
+	    
+	</td>
+	   </tr>
+	   </tbody>
+	</form>
+</table>
+<h2> some racial types</h2>
+<img id="plateImg" alt="images plates">
+<p>
+<input type="button" value="view russo-lithunian jew"
+onclick="document.getElementById('plateImg').src='plate463.jpg';">
+<input type="button" value="view a cherkess"
+onclick="document.getElementById('plateImg').src='troe174.jpg';">
+<input type="button" value="view a belarussian in southern lithunia"
+onclick="document.getElementById('plateImg').src='troe064.jpg';">
+<input type="button" value="view a finn with boreby cranial vault"
+onclick="document.getElementById('plateImg').src='troe055.jpg';">
+</p>
+source:S.coons:Races of Europe.
+<script type="text/javascript">
+  function ratio()
+{
+
+ var HL,HB,FH,UFH,BZ,BG,NB,NL,CI,NI,UF,FI;
+ HL=Number(document.metrology.HL.value);
+ HB=Number(document.metrology.HB.value);
+ CI=100*HB/HL
+ document.metrology.CI.value=CI;
+ FH=Number(document.metrology.FH.value);
+ BZ=Number(document.metrology.BZ.value);
+ FI=100*FH/BZ
+ document.metrology.FI.value=FI;
+ BG=Number(document.metrology.BG.value);
+ NL=Number(document.metrology.NL.value);
+ NB=Number(document.metrology.NB.value);
+ NI=100*NB/NL
+ document.metrology.NI.value=NI;
+ UFH=Number(document.metrology.UFH.value);
+ UF=100*UFH/BZ
+ document.metrology.UF.value=UF;
+}
+</script>
+
+<h3>Measuring Tools & Guides  </h3>
+https://www.researchgate.net/figure/Measurements-on-face-minimum-frontal-breadth-ft-ft-height-of-forehead-tr-n-total_fig1_284454819
+
+<h3> find correlations </h3>
+<table>
+ <tbody>
+  <form name="Sim">
+    
+	
+	<tr> 
+		<td> Your results : </td>
+		<td>
+		<input type="text" name="You" >
+	</td>
+	</tr>
+
+    
+	
+	
+	
+	
+    <tr> 
+	<td> plate46fig3: </td>
+	<td>
+	<input type="text" name="p46fig3" value="[80,95,52.1,57.4]" >
+</td>
+</tr>
+
+<tr> 
+	<td> plate46fig3: </td>
+	<td>
+	<input type="text" name="p6fig3" value="[81.4,92.2,51.0,74.2]" >
+</td>
+</tr>
+	
+
+<tr> 
+	<td> ResultA1: </td>
+	<td>
+	<input type="text" name="Res12" >
+</td>
+</tr>
+	
+
+<tr> 
+	<td> ResultA2: </td>
+	<td>
+	<input type="text" name="Res22" >
+</td>
+</tr>
+	
+<tr>
+<td>
+	
+	<input type="button" value="calculateD2" onclick="euclidean()">
+
+</td>
+</tr>
+
+</form>	
+</tbody>
+</table>
+
+</body>
+<script src="codehtml.js"></script>
+
+
+<h3> More distances? contact me to calculate yours @ </h3>
+     ddd982379@gmail.com
+
+</html>
+
+	
